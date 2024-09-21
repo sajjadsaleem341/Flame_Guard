@@ -19,8 +19,7 @@ def send_email(message):
         sender_email = "sajjadsaleem341@gmail.com"
         receiver_email = "sajjadsaleem442@gmail.com"
         password = "fxieweuzdhrbsekm"
-
-        # Create the HTML content for the email
+        
         html_content = f"""
         <html>
         <body style="font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px;">
@@ -41,16 +40,13 @@ def send_email(message):
         </html>
         """
         
-        # Create the email message object
         msg = MIMEMultipart('alternative')
         msg['Subject'] = "Forest Fire Alert 🚨"
         msg['From'] = sender_email
         msg['To'] = receiver_email
 
-        # Attach the HTML content to the email
         msg.attach(MIMEText(html_content, 'html'))
 
-        # Send the email using Gmail's SMTP server
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
             server.login(sender_email, password)
@@ -71,37 +67,30 @@ def send_email_async(message):
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():
     try:
-        # Extract features from the form
         int_features = [float(x) for x in request.form.values()]
         final_features = [np.array(int_features)] 
         print("Features from form:", int_features)
         print("Final input to model:", final_features)
         
-        # Predict fire occurrence probability
         prediction = model.predict_proba(final_features)
         output = prediction[0][1]  # Probability of fire occurring
         
-        formatted_output = '{0:.2f}'.format(output)  # Format output to 2 decimal places
+        formatted_output = '{0:.2f}'.format(output)
 
         # Check if probability is greater than 0.5
         if output > 0.5:
             # Send an email asynchronously
             send_email_async(formatted_output)
             
-            # Render template with warning message
             return render_template('index.html', 
                                    msg1='Your Forest is in Danger.', 
                                    pred=formatted_output)
         else:
-            # Render template with safe message
             return render_template('index.html', 
                                    msg1='Your Forest is Safe.', 
                                    pred=formatted_output)
     except Exception as e:
-        # Handle errors and display error message
         return render_template('index.html', 
-                               res='Error occurred during prediction.',
-                               res2= 'Please check input values.', 
                                msg=str(e))
     
 if __name__ == '__main__':

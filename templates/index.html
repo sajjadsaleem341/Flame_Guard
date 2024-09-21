@@ -8,8 +8,8 @@
 
   <style>
     :root {
-      --green-color: #005b1b; /* Default green color */
-      --green-hover-color: #184924; /* Default green hover color */
+      --green-color: #005b1b;
+      --green-hover-color: #184924;
     }
 
     * {
@@ -61,7 +61,6 @@
     label {
       font-weight: bold;
       font-size: x-large;
-      /* color: var(--green-color); */
       color: rgb(41, 41, 41);
     }
 
@@ -82,7 +81,6 @@
       margin-top: 8px;
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-weight: bold;
-      font-stretch: extra-expanded;
       font-size: large;
       transition: all 0.3s ease; 
       outline: none;
@@ -106,10 +104,6 @@
       font-size: xx-large;
       color: var(--green-color);
     }
-    .err_mess{
-      font-size: x-large;
-      color: #8D021F;
-    }
     .prediction{
       font-size: 45px;
       color: var(--green-color);
@@ -127,7 +121,7 @@
       <div class="box">
         <div class="left">
           <img src="../static/img/Logo-Green.png" width="260px" height="130px" alt="" id="logo" />
-          <form action="/predict" method="post" class="form">
+          <form action="/predict" method="post" class="form" id="predictionForm">
             <label for="tempurature">Temperature:</label>
             <input
               placeholder="Temperature in Celsius"
@@ -135,6 +129,7 @@
               id="tempurature"
               type="number" step="0.1"
               class="validate"
+              min="-100" max="150" required
             />
             <label for="oxygen">Oxygen:</label>
             <input
@@ -143,6 +138,7 @@
               placeholder="Oxygen ppm"
               type="number" step="0.1"
               class="validate"
+              min="0" max="100" required
             />
             <label for="humidity">Humidity:</label>
             <input
@@ -151,6 +147,7 @@
               placeholder="Humidity %"
               type="number" step="0.1"
               class="validate"
+              min="0" max="100" required
             />
             <button type="submit" class="btn">Predict Probability</button>
           </form>
@@ -161,29 +158,22 @@
               {{pred}}
             </p>
           <p class="message">{{msg1}}</p>
-          <p class="err_mess">{{res}}</p>
-          <p class="err_mess">{{res2}}</p>
         </div>
       </div>
     </div>
 
     <script>
       const pred = document.getElementById('prediction').innerText.trim();
-      console.log(pred);
-      if(pred === "") { // Check for an empty string
-  const headline = document.getElementById('headline');
-  headline.style.display = 'none'; // Ensure headline stays hidden
-} else {
-  const headline = document.getElementById('headline');
-  headline.style.display = 'block'; // Show headline when there's a valid prediction
-}
+      if (pred === "") {
+        document.getElementById('headline').style.display = 'none';
+      } else {
+        document.getElementById('headline').style.display = 'block';
+      }
       if (pred > 0.5) {
         document.documentElement.style.setProperty('--green-color', '#8D021F');
         document.documentElement.style.setProperty('--green-hover-color', '#6A0117'); 
-        const logo = document.getElementById('logo');
-        logo.src = './static/img/Logo-Red.png';
-        const container = document.getElementById('container');
-        container.style.backgroundImage = 'url(./static/img/Background2.jpg)';
+        document.getElementById('logo').src = './static/img/Logo-Red.png';
+        document.getElementById('container').style.backgroundImage = 'url(./static/img/Background2.jpg)';
       }
     </script>
   </body>
