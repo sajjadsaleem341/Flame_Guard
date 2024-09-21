@@ -24,12 +24,12 @@ Introduction:
 1) First install libraries mentioned in "requirements.txt" or run "pip install -r requirements.txt".
 2) Run the project
 
-**Developed By:**
-# Team Name:
+# Developed By:
+**Team Name:**
 SFC-Electra Tech
-# Batch Code
+**Batch Code**
 PR2-202110B1
-# Members:
+**Members:**
 1) Sajjad Saleem (1348083)
 2) Abdul Moiz (1343431)
 3) Muhammad Ezan (1334913)
