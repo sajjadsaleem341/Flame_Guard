@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Flame Guard - Forest Fire Prediction</title>
+  </head>
+
+  <style>
+    :root {
+      --green-color: #005b1b; /* Default green color */
+      --green-hover-color: #184924; /* Default green hover color */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-image: url(./static/img/Background.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-image 0.3s ease; 
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.553);
+      width: 80%;
+      height: 90%;
+      border-radius: 20px;
+      box-shadow: var(--green-color) 0px 22px 90px 4px;
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      row-gap: 30px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 5px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: x-large;
+      /* color: var(--green-color); */
+      color: rgb(41, 41, 41);
+    }
+
+    input {
+      padding: 13px 8px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid var(--green-color);
+    }
+
+    .btn {
+      padding: 15px 5px;
+      color: white;
+      background-color: var(--green-color);
+      border: 3px solid var(--green-hover-color);
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+      margin-top: 8px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-stretch: extra-expanded;
+      font-size: large;
+      transition: all 0.3s ease; 
+      outline: none;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      background-color: var(--green-hover-color); 
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px, rgba(0, 0, 0, 0.22) 0px 5px 10px; 
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .message{
+      font-size: xx-large;
+      color: var(--green-color);
+    }
+    .err_mess{
+      font-size: x-large;
+      color: #8D021F;
+    }
+    .prediction{
+      font-size: 45px;
+      color: var(--green-color);
+      font-weight: bolder;
+    }
+    .headline{
+      font-size: xx-large;
+      display: none;
+    }
+    
+  </style>
+
+  <body>
+    <div class="container" id="container">
+      <div class="box">
+        <div class="left">
+          <img src="../static/img/Logo-Green.png" width="260px" height="130px" alt="" id="logo" />
+          <form action="/predict" method="post" class="form">
+            <label for="tempurature">Temperature:</label>
+            <input
+              placeholder="Temperature in Celsius"
+              name="Temperature"
+              id="tempurature"
+              type="number" step="0.1"
+              class="validate"
+            />
+            <label for="oxygen">Oxygen:</label>
+            <input
+              id="oxygen"
+              name="Oxygen"
+              placeholder="Oxygen ppm"
+              type="number" step="0.1"
+              class="validate"
+            />
+            <label for="humidity">Humidity:</label>
+            <input
+              id="humidity"
+              name="Humidity"
+              placeholder="Humidity %"
+              type="number" step="0.1"
+              class="validate"
+            />
+            <button type="submit" class="btn">Predict Probability</button>
+          </form>
+        </div>
+        <div class="right">
+          <p class="headline" id="headline">Probability of Fire occurring is:</p>
+            <p id="prediction" class="prediction">
+              {{pred}}
+            </p>
+          <p class="message">{{msg1}}</p>
+          <p class="err_mess">{{res}}</p>
+          <p class="err_mess">{{res2}}</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const pred = document.getElementById('prediction').innerText.trim();
+      console.log(pred);
+      if(pred === "") { // Check for an empty string
+  const headline = document.getElementById('headline');
+  headline.style.display = 'none'; // Ensure headline stays hidden
+} else {
+  const headline = document.getElementById('headline');
+  headline.style.display = 'block'; // Show headline when there's a valid prediction
+}
+      if (pred > 0.5) {
+        document.documentElement.style.setProperty('--green-color', '#8D021F');
+        document.documentElement.style.setProperty('--green-hover-color', '#6A0117'); 
+        const logo = document.getElementById('logo');
+        logo.src = './static/img/Logo-Red.png';
+        const container = document.getElementById('container');
+        container.style.backgroundImage = 'url(./static/img/Background2.jpg)';
+      }
+    </script>
+  </body>
+</html>

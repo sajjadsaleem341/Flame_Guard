@@ -1,0 +1,248 @@
+Area,Oxygen,Temperature,Humidity,Fire Occurrence
+Jharkand,40,45,20,1
+Bangalore,50,30,10,1
+Ecuador,10,20,70,0
+a,60,45,70,1
+Bangalore,30,48,10,1
+c,50,15,30,0
+de,5,35,35,0
+asd,5,20,70,0
+Ecuador,60,32,19,1
+r,30,50,45,1
+t,40,55,80,1
+y,30,39,100,0
+Jharkand,10,12,12,0
+Bangalore,20,23,23,0
+Ecuador,60,34,15,1
+canada,80,4,68,0
+c,25,56,79,1
+c,12,45,90,0
+asd,28,43,15,1
+asd,26,0,32,0
+ad,32,37,21,1
+sasd,45,48,12,1
+asd,56,15,65,0
+asdas,67,45,33,1
+das,78,49,8,1
+das,89,45,18,1
+ads,21,12,44,0
+ads,11,20,59,0
+asd,1,32,70,0
+,5,20,45,0
+,42,43,20,1
+,32,60,30,1
+,5,15,5,0
+,20,30,5,0
+,30,51,2,1
+,60,60,10,1
+,10,10,60,0
+,0,30,0,0
+,45,45,15,1
+Delhi,30,35,45,1
+Kolkata,20.5,40,30,1
+Karachi,15,50,20,0
+London,25,45.2,25,1
+Sydney,10,55,15,1
+Rio,5,60,50,0
+Madrid,40,30,35.5,1
+Beijing,60,25,60,0
+Moscow,35.5,42,40,1
+Oslo,12,48,55,0
+Tokyo,50,33,20,1
+Berlin,20,39,30,0
+Paris,30,45,25,1
+Cairo,45,55,15,1
+Jakarta,25,65,70,0
+Bangkok,40,35,45,1
+Mumbai,60,28,60,0
+Lima,15,48,40,1
+Istanbul,22,50,30,1
+Mexico City,10,60,80,0
+Nairobi,30,55,20,1
+Hanoi,5,70,15,0
+Sao Paulo,35,45,55,1
+Buenos Aires,45,32,35,1
+Toronto,20,48,10,0
+Los Angeles,12,55,45,1
+San Francisco,30,42,30,0
+Seattle,50,38,15,1
+Houston,35,45,25,1
+Atlanta,10,60,70,0
+Detroit,15,50,35,1
+Chicago,25,30,40,1
+Philadelphia,20,65,20,0
+Phoenix,12,48,45,1
+Dallas,30,35,50,1
+Washington,60,29,25,0
+Boston,40,45,30,1
+Miami,25,55,15,1
+Orlando,35,50,60,0
+Vancouver,10,60,20,1
+Austin,45,55,25,1
+New Orleans,15,40,30,0
+Baltimore,50,32,55,1
+Phoenix,12,58,20,0
+Cincinnati,35,45,15,1
+Minneapolis,20,70,10,0
+Portland,30,35,45,1
+Salt Lake City,50,42,50,1
+Raleigh,5,30,30,0
+Cleveland,45,40,60,1
+Indianapolis,10,55,20,1
+St. Louis,25,65,15,0
+Kansas City,40,50,70,1
+Oklahoma City,12,48,30,0
+Tampa,30,35,20,1
+Pittsburgh,55,40,25,1
+San Diego,15,42,50,1
+Nashville,25,30,70,0
+Atlanta,10,60,15,1
+Columbus,30,55,35,1
+Louisville,60,28,80,0
+Charlotte,40,45,30,1
+Memphis,50,38,45,1
+Jacksonville,20,50,25,0
+Omaha,10,70,10,0
+Tucson,35,35,15,1
+Virginia Beach,12,55,60,1
+Colorado Springs,45,30,20,1
+Virginia Beach,20,25,75,0
+Grand Rapids,30,40,50,1
+Chattanooga,10,60,10,0
+Richmond,50,45,35,1
+Baton Rouge,12,35,45,1
+Newark,15,40,55,0
+Wichita,40,30,60,1
+Arlington,25,50,20,1
+Tallahassee,5,60,10,0
+Henderson,35,45,30,1
+Scottsdale,30,50,35,1
+Reno,20,55,20,0
+Syracuse,50,45,15,1
+Peoria,60,28,80,0
+Phoenix,10,50,30,1
+Tunis,12,35,60,1
+Tripoli,30,45,50,1
+Rabat,40,50,25,0
+Casablanca,25,30,70,1
+Accra,5,60,10,0
+Lagos,35,40,30,1
+Nairobi,20,55,20,0
+Hanoi,12,30,80,1
+Bangkok,30,35,50,1
+Manila,50,45,60,1
+Kuala Lumpur,10,50,15,1
+Singapore,40,55,30,0
+Jakarta,15,40,70,1
+Santiago,25,35,60,1
+Buenos Aires,5,70,20,0
+Lima,30,40,50,1
+Bogotá,20,55,25,0
+Caracas,10,60,30,1
+Quito,35,45,15,1
+La Paz,12,30,70,1
+Sucre,50,55,20,0
+Santiago,40,45,30,1
+Asunción,25,35,60,0
+Montevideo,10,60,15,1
+Antigua,30,50,25,1
+Kingston,15,45,20,1
+Port-au-Prince,20,35,75,0
+Havana,5,60,10,1
+San Juan,40,50,30,1
+Copenhagen,35,30,40,1
+Reykjavik,60,25,80,0
+Helsinki,15,60,20,1
+Oslo,25,35,60,0
+Stockholm,10,55,15,1
+Zaragoza,30,40,30,1
+Santiago,50,45,15,1
+Bogota,20,50,25,0
+Caracas,5,70,20,0
+Quito,35,40,15,1
+Lima,15,55,30,1
+Asuncion,25,45,20,1
+La Paz,10,30,80,0
+Montevideo,30,35,50,1
+Porto,40,55,25,0
+Cascais,50,28,70,1
+Antwerp,20,60,15,1
+Ghent,15,55,35,1
+Brussels,30,45,20,1
+Amsterdam,40,50,30,0
+Rotterdam,5,70,10,1
+Copenhagen,25,35,60,1
+Oslo,60,40,25,1
+Stockholm,10,30,75,0
+Helsinki,20,55,20,1
+Tallinn,15,60,15,1
+Riga,35,50,30,0
+Vilnius,50,35,20,1
+Kyiv,12,55,60,1
+Minsk,30,30,40,1
+Chisinau,25,50,15,1
+Bucharest,5,60,20,0
+Sofia,40,55,25,1
+Belgrade,10,70,10,0
+Zagreb,30,35,50,1
+Sarajevo,60,28,60,0
+Podgorica,20,55,25,0
+Pristina,35,40,30,1
+Tirana,15,60,15,1
+Skopje,50,35,20,1
+Budapest,10,70,10,0
+Vienna,20,55,25,1
+Bratislava,30,35,50,1
+Prague,40,50,15,1
+Warsaw,25,60,20,0
+Krakow,5,70,10,1
+Wroclaw,35,40,15,1
+Gdansk,10,30,20,0
+Riga,50,45,20,1
+Tallinn,15,55,30,1
+Helsinki,30,40,30,1
+Oslo,20,50,25,0
+Copenhagen,35,45,20,1
+Amsterdam,40,35,15,1
+Rotterdam,50,30,70,0
+Berlin,15,60,15,1
+Frankfurt,10,70,20,1
+Munich,20,55,25,0
+Stuttgart,30,35,50,1
+Dusseldorf,40,50,15,1
+Cologne,25,40,30,1
+Hamburg,5,60,10,0
+Leipzig,30,50,25,1
+Dresden,10,70,20,1
+Nuremberg,20,55,25,0
+Tunis,35,45,15,1
+Tripoli,50,30,70,1
+Rabat,15,40,15,1
+Casablanca,30,60,25,0
+Accra,20.5,50,20,1
+Lagos,12,55,30,1
+Nairobi,35,40,15,1
+Hanoi,5,70,10,1
+Bangkok,40,35,25,1
+Manila,50,60,15,0
+Kuala Lumpur,30,50,30,1
+Singapore,10,70,10,1
+Jakarta,20,55,25,0
+Santiago,15,60,15,1
+Buenos Aires,25,40,30,1
+Lima,5,70,10,0
+Bogotá,30,45,50,1
+Caracas,40,55,25,1
+Quito,50,30,15,1
+La Paz,15,50,30,0
+Sucre,20.5,60,25,1
+Santiago,35,45,30,1
+Asunción,10,70,20,0
+Montevideo,50,35,25,1
+Antigua,15,60.5,15,1
+Kingston,30,40,50,1
+Havana,20,55,25,0
+San Juan,5,70,10,0
+Copenhagen,35,45.5,30,1
+Reykjavik,15,60,15,1
+Helsinki,50,30,20,1
