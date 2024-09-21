@@ -16,8 +16,8 @@ Introduction:
 ## Installation
 1. Clone the repository:
    ```bash
-   $ git clone https://github.com/sajjadsaleem341/flameguard.git
-   $ cd flameguard
+   $ git clone https://github.com/sajjadsaleem341/Flame_Guard.git
+   $ cd flame_guard
 
 
 ## Instructions to Run Project
