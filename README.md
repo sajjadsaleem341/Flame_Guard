@@ -1,6 +1,10 @@
 # FlameGuard - Forest Fire Prediction
 Introduction:
 **FlameGuard** is a Forest Fire Prediction project aimed at creating a highly accurate and efficient machine learning model that predicts the probability of forest fires based on key environmental factors. The system's primary goal is to offer a user-friendly and reliable tool for mitigating the risks associated with forest fires. Users input data such as oxygen levels, temperature, and humidity, and the model generates a prediction on a scale from 0 to 1. If a significant risk of fire is detected, the system automatically alerts the relevant authorities by sending an email, ensuring timely intervention.
+
+
+![Project Logo](static/img/Logo-Green.png)
+
  
 ## Technologies Used
 - **Backend:** Flask
